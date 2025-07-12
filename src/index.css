@@ -1,0 +1,321 @@
+/* File: src/index.css - LENGKAP DENGAN SEMUA PERBAIKAN */
+
+/* Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #2a2a2a; /* Latar belakang utama */
+    color: #f8f8f8;
+}
+
+/* Header & Navbar */
+.navbar {
+    border-bottom: 2px solid #ffc107;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    padding: 5px 0;
+    margin-left: 30px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffc107 !important;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* Bagian Hero (Halaman Index) */
+.hero-section {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('/img/laundry.jpg'); /* Pastikan path ini benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); /* Overlay lebih gelap */
+}
+
+.hero-content h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* Styling Bagian Umum */
+.section {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.section:nth-of-type(odd) {
+    background-color: #333333;
+}
+
+.section:nth-of-type(even) {
+    background-color: #2a2a2a;
+}
+
+.section-title {
+    font-size: 2.8em;
+    color: #ffc107;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 3px;
+}
+
+.section-description {
+    font-size: 1.1em;
+    color: #cccccc;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tombol */
+.btn-warning {
+    transition: transform 0.3s ease;
+}
+.btn-warning:hover {
+    transform: translateY(-3px);
+}
+
+.btn-phone {
+    font-size: 1.8em;
+    padding: 20px 40px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Ikhtisar Layanan & Bagian Layanan Kami */
+.service-list-grid {
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-item {
+    padding: 15px 20px;
+    background-color: #333333;
+    border-radius: 8px;
+    color: #cccccc;
+    font-size: 1.05em;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-item::before {
+    content: '✅';
+    color: #ffc107;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.service-item:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-5px);
+}
+
+.call-to-action {
+    font-size: 1.4em;
+    color: #f8f8f8;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Tabel Harga */
+.pricing-table .table {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.table-warning {
+    --bs-table-bg: #ffc107;
+    --bs-table-color: #333;
+}
+
+/* Bagian Statistik E-commerce */
+.stat-item {
+    background-color: #333333;
+    padding: 35px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-height: 180px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    background-color: #3a3a3a;
+}
+
+.stat-item .stat-number {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #ffc107;
+}
+
+.stat-item .stat-label {
+    font-size: 1.3em;
+    color: #f8f8f8;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stat-item p {
+    color: #f8f8f8;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Bagian Tentang Kami */
+.about-content {
+    background-color: #2a2a2a;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.about-content h3 {
+    font-size: 2.2em;
+    color: #ffc107;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.about-content p {
+    color: #cccccc;
+    font-size: 1.15em;
+}
+
+/* Bagian Ulasan (Testimoni) */
+.testimonial-card.card {
+    background-color: #fff3cd; /* Kuning muda cerah */
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card.card .card-body {
+    color: #856404; /* Warna teks gelap agar kontras dengan latar belakang kuning */
+}
+
+.testimonial-card.card h3 {
+    color: #664d03; /* Warna judul sedikit lebih gelap */
+}
+
+.testimonial-card .author {
+    color: #856404; /* Warna teks author */
+}
+
+.testimonial-card.card:hover {
+    transform: translateY(-5px); /* Sedikit terangkat ke atas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih jelas saat di-hover */
+}
+
+/* Bagian Galeri */
+.gallery-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Bagian Kontak */
+.contact-form-container {
+    background-color: #2a2a2a;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-container p,
+.contact-form-container .form-label {
+    color: #f8f8f8;
+}
+
+.contact-form-container a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-form-container a:hover {
+    color: #e0a800;
+}
+
+.form-control {
+    background-color: #444;
+    color: #f8f8f8;
+    border: 1px solid #555;
+}
+.form-control:focus {
+    background-color: #444;
+    color: #f8f8f8;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.4);
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid #ffc107;
+    background-color: #222;
+}
+
+
+/* Desain Responsif */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+}
